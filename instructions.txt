@@ -1,0 +1,15 @@
+Gitpod solution, before running PostgreSQL:
+
+1) set_pg
+2) psql
+
+If superadmin do:
+
+1) sudo apt update
+2) sudo apt install postgresql
+3) psql --version
+4) sudo service postgresql start
+5) sudo service postgresql status
+6) psql
+
+- > Follow this https://www.gitpod.io/guides/gitpodify

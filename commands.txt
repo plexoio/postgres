@@ -1,0 +1,30 @@
+- psql
+- \l
+- CREATE DATABASE chinook;
+- \c chinook
+or
+- psql -d chinook
+- \i Chinook_PostgreSql.sql
+
+------
+
+- \dt
+
+- SELECT * FROM "Artist" WHERE "Name" = 'Queen';
+
+- SELECT "Name" FROM "Artist";
+
+- SELECT * FROM "Artist" WHERE "ArtistId" = 51;
+
+- SELECT * FROM "Album" WHERE 
+"ArtistId" = 51;
+
+\o test.json
+
+SELECT json_agg(t) FROM (SELECT * FROM "Track" WHERE "Composer" = 'Queen') t; 
+
+\copy (SELECT * FROM "Track" WHERE "Composer" = 'Queen') TO 'test.csv' WITH CSV DELIMITER ',' HEARDER;
+
+---
+
+Microsoft Excel, LibreOffice Calc, or Google Sheets.
