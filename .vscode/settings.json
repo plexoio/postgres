@@ -26,5 +26,8 @@
    "editor.defaultFormatter": "HookyQR.beautify",
    "[plaintext]": {
       "editor.defaultFormatter": "lkrms.inifmt"
+   },
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.python"
    }
 }
