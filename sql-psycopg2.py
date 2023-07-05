@@ -13,7 +13,7 @@ cursor = connection.cursor()
 # cursor.execute('SELECT "Name" FROM "Artist"')
 
 # Query 3 - Select all data from the 'Artist' table where name = Queen
-cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Aerosmith"])
+# cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Aerosmith"])
 
 # Query 4 - Select all records from the 'Artist' table where ArtistId = 51
 # cursor.execute('SELECT * FROM "Artist" WHERE "ArtistId" = %s', [50])
@@ -37,5 +37,5 @@ connection.close()
 # print results
 for result in results:
     print(result)
-    if result[0] == 424:
+    if result[0] == 5:
         print(f'\nMy prefered result: {result[1]}\n')

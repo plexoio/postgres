@@ -1,6 +1,6 @@
 Command | Explanation
 --- | ---
-`psql` | This command is used to start the PostgreSQL command-line interface, allowing you to interact with a PostgreSQL database.
+`psql` (set_pg) | This command is used to start the PostgreSQL command-line interface, allowing you to interact with a PostgreSQL database.
 `\l` | This command is used within the psql interface to list all available databases.
 `CREATE DATABASE chinook;` | This SQL command creates a new database named "chinook".
 `\c chinook` or `psql -d chinook` | These commands are used to connect to the "chinook" database within the psql interface.
