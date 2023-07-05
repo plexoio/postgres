@@ -13,3 +13,12 @@ If superadmin do:
 6) psql
 
 - > Follow this https://www.gitpod.io/guides/gitpodify
+
+Using:
+1) pip3 install sqlalchemy==1.4.46
+
+Three ways of dealing with PostgreSQL:
+
+1) CLI
+2) PyscoPG2
+3) SQLalchemy (3 levels of abstracions: CLI, Expression, ORM)
