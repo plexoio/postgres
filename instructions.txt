@@ -21,4 +21,4 @@ Three ways of dealing with PostgreSQL:
 
 1) CLI
 2) PyscoPG2
-3) SQLalchemy (3 levels of abstracions: CLI, Expression, ORM)
+3) SQLalchemy (3 levels of abstracions: Raw, Expression (tabel focused), ORM (class-based models))

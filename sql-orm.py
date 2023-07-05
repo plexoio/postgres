@@ -93,7 +93,8 @@ base.metadata.create_all(db)
 
 # for album in albums:
 #     print(
-#         f'AlbumId: {album.AlbumId}, ArtistId: {album.ArtistId}, Title: {album.Title}')
+#         f'AlbumId: {album.AlbumId}, ArtistId: {album.ArtistId}, 
+# Title: {album.Title}')
 
 # Query 6 - Select all records from the 'Track'
 
@@ -101,7 +102,8 @@ base.metadata.create_all(db)
 
 # for track in tracks:
 #     print(track.TrackId, track.Name, track.AlbumId, track.MediaTypeId,
-#           track.GenreId, track.Composer, track.Milliseconds, track.Bytes, track.UnitPrice, sep=' | ')
+#           track.GenreId, track.Composer, track.Milliseconds,
+# track.Bytes, track.UnitPrice, sep=' | ')
 
 
 # Query 7 - Select all records from the 'Track'
