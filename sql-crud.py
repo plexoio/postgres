@@ -5,16 +5,16 @@ from sqlalchemy import (
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# excecuting the chinook database
+# excecuting the chinook dataBase
 db = create_engine("postgresql:///chinook")
 
 # grab metadata and return subclass to map all back to us
-base = declarative_base()
+Base = declarative_base()
 
 
-# create a class-based model for the 'Programmer' table schema
+# create a class-Based model for the 'Programmer' table schema
 
-class Programmer(base):
+class Programmer(Base):
     __tablename__ = 'Programmer'
     id = Column(Integer, primary_key=True)
     first_name = Column(String)
@@ -32,9 +32,9 @@ Session = sessionmaker(db)
 
 session = Session()
 
-# Create database using the declarative_base subclass 'base'
+# Create dataBase using the declarative_Base subclass 'Base'
 
-base.metadata.create_all(db)
+Base.metadata.create_all(db)
 
 # Create a table of 'Ada Lovelace'
 ada_lovelace = Programmer(
@@ -100,20 +100,48 @@ tim_berners_lee = Programmer(
 
 )
 
+frank_arellano = Programmer(
+    first_name='Frank',
+    last_name='Arellano',
+    gender='M',
+    nationality='Venezuelan',
+    famous_for='Software Engineering'
+
+)
+
 # add each instace of our programmers to our session
 
 # session.add(ada_lovelace) # already commited
-session.add(alan_turing)
-session.add(grace_hopper)
-session.add(maraget_halimton)
-session.add(bill_gates)
-session.add(tim_berners_lee)
+# session.add(alan_turing)
+# session.add(grace_hopper)
+# session.add(maraget_halimton)
+# session.add(bill_gates)
+# session.add(tim_berners_lee)
+# session.add(frank_arellano)
 
-# commit session to the database
 
-session.commit()
+# Update DataBases, specific
 
-# query the database to find our creation
+# programmer_update = session.query(Programmer).filter_by(id=7).first()
+# programmer_update.famous_for = "World President"
+
+# Update DataBase, general
+
+people = session.query(Programmer)
+for person in people:
+    if person.gender == "F":
+        person.gender = "Female"
+    elif person.gender == "M":
+        person.gender = "Male"
+    else:
+        print('Gender undefined')
+    session.commit()
+
+# commit session to the dataBase
+
+# session.commit()
+
+# query the dataBase to find our creation
 
 programmers = session.query(Programmer)
 for programmer in programmers:
@@ -125,4 +153,3 @@ for programmer in programmers:
         programmer.famous_for,
         sep=" | "
     )
-
